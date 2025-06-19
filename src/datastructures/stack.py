@@ -34,7 +34,12 @@ my_stack.display()  # Stack: ['A', 'B', 'C']
 
 
 def reverse(word):
-    # -- your code goes here --
+    stack= Stack()
+    for char in word:
+        stack.push(char)
+    reverse_word= None
+    while not stack.is_empty:
+        reverse +=stack.pop(())
     pass
 
 def is_balanced(brackets):
