@@ -24,7 +24,6 @@ def place_mark(row, col, mark):
 
 # Function to check for a winner
 def check_winner(mark):
-    # Check rows
     for i in range(3):
         count = 0
         for j in range(3):
@@ -33,13 +32,24 @@ def check_winner(mark):
         if count == 3:
             return True
 
-    # Check columns
-    # -- your code goes here --
+    
+    for j in range(3):
+        count = 0
+        for i in range(3):
+            if board[i][j] == mark:
+                count += 1
+        if count == 3:
+            return True
 
-    # Check main diagonal
-    # -- your code goes here --
+    
+    count = 0
+    for i in range(3):
+        if board[i][i] == mark:
+            count += 1
+    if count == 3:
+        return True
 
-    # Check anti-diagonal
+   
     count = 0
     for i in range(3):
         if board[i][2 - i] == mark:
