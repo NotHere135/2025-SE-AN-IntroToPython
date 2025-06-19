@@ -24,6 +24,7 @@ def place_mark(row, col, mark):
 
 # Function to check for a winner
 def check_winner(mark):
+    # Check rows
     for i in range(3):
         count = 0
         for j in range(3):
